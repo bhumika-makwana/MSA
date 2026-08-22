@@ -118,31 +118,3 @@ https://tianyu-lu.github.io/communication/protein/ml/2021/04/09/Potts-Model-Visu
 
 
 
-
-
-
-https://cs.rice.edu/~ogilvie/comp571/pssm/
-Global and local alignment tools like BLAST are typically used to search for and align homologous sequences which are related by common descent. However we may also wish to search for short sequence motifs which are similar primarily because they have a common function.
-
-These sequences might be homologous if they are related through common descent, but they may also have evolved convergently (need to perform similar functions due to similar environmental challenges).
-> Certainly extremely short and simple functional motifs like splice sites can evolve independently again and again, and nobody would claim that every intron1 in a genome is homologous.
-> but when looking for short motifs we are usually interested in them for their common function rather than their common origin.
-> One way to find these motifs is to use a position-specific score matrix, or PSSM.  - a PSSM specifies the scores for observing particular amino acids or nucleotides at specific positions.
-
-
-?????? AlphaFold does not use external DCA tools like EVcouplings. Instead, AlphaFold generates raw MSAs using search tools like HHblits and Jackhmmer.
-???????
-
-
-
-https://www.youtube.com/watch?v=uPoFdCUqBWk
-**Protein Language models:**
-https://liambai.com/protein-evolution/
-
-
-
-
-
-
-[a.] Sequence Alignment tools
-[b.] Coupling Modelling
