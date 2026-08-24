@@ -99,16 +99,25 @@ https://tianyu-lu.github.io/communication/protein/ml/2021/04/09/Potts-Model-Visu
     Off-diagonal blocks (i ≠ j): the ones that matter for coevolution — how amino acid a at position i covaries with amino acid b at position j.
         
     Step 5 — Assemble the full covariance matrix
-    Stack every 21×21 block C_ij for all i, j = 1...L into one matrix of size (L·21) × (L·21):
-                    j=1 block      j=2 block     ...    j=L block
-        i=1  [ C_11(21×21)   C_12(21×21)   ...   C_1L(21×21) ]
-        i=2  [ C_21(21×21)   C_22(21×21)   ...   C_2L(21×21) ]
-        .   [     ...            ...       ...       ...    ]
-        i=L  [ C_L1(21×21)   C_L2(21×21)   ...   C_LL(21×21) ]xs
 
-    Same L×L grid-of-blocks structure as J, but populated with raw covariances rather than couplings. This matrix is symmetric and positive semi-definit
+  Stack every 21×21 block C_ij for all i, j = 1...L into one matrix of size (L·21) × (L·21):
+
+                j=1 block      j=2 block     ...    j=L block
+
+        i=1  [ C_11(21×21)   C_12(21×21)   ...   C_1L(21×21) ]
+
+        i=2  [ C_21(21×21)   C_22(21×21)   ...   C_2L(21×21) ]
+
+         .   [     ...            ...       ...       ...    ]
+
+         i=L  [ C_L1(21×21)   C_L2(21×21)   ...   C_LL(21×21) ]xs
+
+    Same L×L grid-of-blocks structure as J, but populated with raw covariances rather than couplings.
+
+    This matrix is symmetric and positive semi-definit
 
     Step 6 — Regularize and invert
+
     C_reg = C + λI
    
    Then invert: J ≈ −(C_reg)^(-1)
